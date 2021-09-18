@@ -57,7 +57,6 @@
                                           <Component id="MascaraBin" alignment="0" max="32767" attributes="0"/>
                                           <Component id="RedesBin" alignment="0" max="32767" attributes="0"/>
                                           <Component id="BroadcastBin" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="CT" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace pref="9" max="32767" attributes="0"/>
                                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
@@ -67,7 +66,6 @@
                       </Group>
                   </Group>
                   <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" pref="28" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -165,12 +163,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel16" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                  <Component id="CT" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="HT" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -181,7 +174,7 @@
                   <Component id="Clase" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="40" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -357,14 +350,6 @@
         <Property name="text" type="java.lang.String" value="Broadcast"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel16">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="14" style="0"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Conexiones totales"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel17">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -388,8 +373,6 @@
     <Component class="javax.swing.JLabel" name="RedDec">
     </Component>
     <Component class="javax.swing.JLabel" name="BroDec">
-    </Component>
-    <Component class="javax.swing.JLabel" name="CT">
     </Component>
     <Component class="javax.swing.JLabel" name="HT">
     </Component>

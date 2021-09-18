@@ -43,7 +43,6 @@ public class calculadora extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         DireccionBin = new javax.swing.JLabel();
         MascaraBin = new javax.swing.JLabel();
@@ -53,7 +52,6 @@ public class calculadora extends javax.swing.JFrame {
         MasDec = new javax.swing.JLabel();
         RedDec = new javax.swing.JLabel();
         BroDec = new javax.swing.JLabel();
-        CT = new javax.swing.JLabel();
         HT = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         Clase = new javax.swing.JLabel();
@@ -148,9 +146,6 @@ public class calculadora extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel15.setText("Broadcast");
 
-        jLabel16.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel16.setText("Conexiones totales");
-
         jLabel17.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel17.setText("Hosts totales");
 
@@ -199,12 +194,10 @@ public class calculadora extends javax.swing.JFrame {
                                             .addComponent(DireccionBin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(MascaraBin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(RedesBin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(BroadcastBin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(CT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addComponent(BroadcastBin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                                         .addComponent(jButton1))))))
                     .addComponent(jLabel17)
-                    .addComponent(jLabel16)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -287,11 +280,7 @@ public class calculadora extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel15)
                             .addComponent(BroDec))))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CT))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(HT))
@@ -300,7 +289,7 @@ public class calculadora extends javax.swing.JFrame {
                     .addComponent(jLabel18)
                     .addComponent(Clase)
                     .addComponent(jButton1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
@@ -345,6 +334,7 @@ public class calculadora extends javax.swing.JFrame {
                 DirBin = (DirBin << 8) + Integer.parseInt(ipByte4, 2);
                 //Generando la mascara de red de 32bit en binario
                 int MasBin = ~0 << (32 - bitMas);
+                int MasBin1 = MasBin - 1;
                 //Operación para la dirección de Red
                 int RedBin = DirBin & MasBin;
                 //Operación para la dirección broadcast
@@ -352,7 +342,7 @@ public class calculadora extends javax.swing.JFrame {
                 //dividiento el string con punto (".")
                 String strDirBin = Integer.toBinaryString(DirBin);
                 String[] printDirBin = strDirBin.split("(?<=\\G........)");
-                String strMasBin = Integer.toBinaryString(MasBin);
+                String strMasBin = Integer.toBinaryString(MasBin1);
                 String[] printMasBin = strMasBin.split("(?<=\\G........)");
                 String strRedBin = Integer.toBinaryString(RedBin);
                 String[] printRedBin = strRedBin.split("(?<=\\G........)");
@@ -363,7 +353,7 @@ public class calculadora extends javax.swing.JFrame {
                 DireccionBin.setText(printDirBin[0] + "." + printDirBin[1] + "." + printDirBin[2] + "." + printDirBin[3]);
                 MascaraBin.setText(printMasBin[0] + "." + printMasBin[1] + "." + printMasBin[2] + "." + printMasBin[3]);
                 RedesBin.setText(printRedBin[0] + "." + printRedBin[1] + "." + printRedBin[2] + "." + printRedBin[3]);
-                BroadcastBin.setText(printBroBin[0] + "." + printBroBin[1] + "." + printBroBin[2] + "." + printBroBin[3]);
+                BroadcastBin.setText(printBroBin[0] + "." + printBroBin[1] + "." + printBroBin[2] + "." + printBroBin[3] + " ");
                 //Decimal
                 DirDec.setText(q1.getText() + "." + q2.getText() + "." + q3.getText() + "." + q4.getText());
                 MasDec.setText(String.valueOf(Integer.parseInt(printMasBin[0], 2)) + "."
@@ -378,19 +368,15 @@ public class calculadora extends javax.swing.JFrame {
                         + String.valueOf(Integer.parseInt(printBroBin[1], 2)) + "."
                         + String.valueOf(Integer.parseInt(printBroBin[2], 2)) + "."
                         + String.valueOf(Integer.parseInt(printBroBin[3], 2)));
-                CT.setText(String.valueOf(~(~0 << bitMas)));
-                HT.setText(String.valueOf(~MasBin));
+                HT.setText(String.valueOf((~MasBin)-1));
                 //Resolviendo tipo de clases
-            if ((octeto >= 0) && (octeto <= 127)) {
+            int HT1 = (Integer.valueOf(HT.getText())-1);
+            if (HT1 >= 64516) {
                 Clase.setText("Clase A");
-            } else if ((octeto >= 128) && (octeto <= 191)) {
+            } else if ((HT1 >= 254) && (HT1 <= 64516)) {
                 Clase.setText("Clase B");
-            } else if ((octeto >= 192) && (octeto <= 223)) {
+            } else if ((HT1 >= 0) && (HT1 <= 254)) {
                 Clase.setText("Clase C");
-            } else if ((octeto >= 224) && (octeto <= 239)) {
-                Clase.setText("Clase D");
-            } else if ((octeto >= 240) && (octeto <= 255)) {
-                Clase.setText("Clase E");
             }
         } else if ((octeto > 255) || (octeto1 > 255) || (octeto2 > 255) || (octeto3 > 255)) {
             DireccionBin.setText("No existe en");
@@ -401,7 +387,6 @@ public class calculadora extends javax.swing.JFrame {
         MasDec.setText("decimal");
         RedDec.setText(" ");
         BroDec.setText(" ");
-        CT.setText(" ");
         HT.setText(" ");
             Clase.setText(" ");
         }
@@ -416,7 +401,6 @@ public class calculadora extends javax.swing.JFrame {
         MasDec.setText(" ");
         RedDec.setText(" ");
         BroDec.setText(" ");
-        CT.setText(" ");
         HT.setText(" ");
         Clase.setText(" ");
     }//GEN-LAST:event_jButton1MouseClicked
@@ -460,7 +444,6 @@ public class calculadora extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BroDec;
     private javax.swing.JLabel BroadcastBin;
-    private javax.swing.JLabel CT;
     private javax.swing.JButton Calcular;
     private javax.swing.JLabel Clase;
     private javax.swing.JLabel DirDec;
@@ -478,7 +461,6 @@ public class calculadora extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
