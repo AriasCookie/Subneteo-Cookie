@@ -206,7 +206,7 @@
     <Component class="javax.swing.JTextField" name="q1">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="192"/>
+        <Property name="text" type="java.lang.String" value="000"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="q1ActionPerformed"/>
@@ -215,13 +215,13 @@
     <Component class="javax.swing.JTextField" name="q2">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="168"/>
+        <Property name="text" type="java.lang.String" value="000"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="q3">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="254"/>
+        <Property name="text" type="java.lang.String" value="000"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="q3ActionPerformed"/>
@@ -230,7 +230,7 @@
     <Component class="javax.swing.JTextField" name="q4">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="254"/>
+        <Property name="text" type="java.lang.String" value="000"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="q4ActionPerformed"/>
@@ -247,7 +247,7 @@
     <Component class="javax.swing.JTextField" name="mascara">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="24"/>
+        <Property name="text" type="java.lang.String" value="00"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mascaraActionPerformed"/>

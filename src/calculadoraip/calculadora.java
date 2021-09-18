@@ -65,7 +65,7 @@ public class calculadora extends javax.swing.JFrame {
         jLabel1.setText("IP");
 
         q1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        q1.setText("192");
+        q1.setText("000");
         q1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 q1ActionPerformed(evt);
@@ -73,10 +73,10 @@ public class calculadora extends javax.swing.JFrame {
         });
 
         q2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        q2.setText("168");
+        q2.setText("000");
 
         q3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        q3.setText("254");
+        q3.setText("000");
         q3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 q3ActionPerformed(evt);
@@ -84,7 +84,7 @@ public class calculadora extends javax.swing.JFrame {
         });
 
         q4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        q4.setText("254");
+        q4.setText("000");
         q4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 q4ActionPerformed(evt);
@@ -95,7 +95,7 @@ public class calculadora extends javax.swing.JFrame {
         jLabel2.setText("/");
 
         mascara.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        mascara.setText("24");
+        mascara.setText("00");
         mascara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mascaraActionPerformed(evt);
@@ -333,7 +333,7 @@ public class calculadora extends javax.swing.JFrame {
         int octeto2 = Integer.valueOf(q2.getText());
         int octeto1 = Integer.valueOf(q1.getText());
         int octeto = Integer.valueOf(q4.getText());
-        if ((octeto >= 0) && (octeto <= 255) && (octeto1 >= 0) && (octeto1 <= 255) && (octeto2 >= 0) && (octeto2 <= 255) && (octeto3 >= 0) && (octeto3 <= 255)) {
+        if ((octeto >= 0) && (octeto <= 255) && (octeto1 >= 0) && (octeto1 <= 255) && (octeto2 >= 0) && (octeto2 <= 255) && (octeto3 >= 0) && (octeto3 <= 255) && (octeto1 > 0)) {
             String bq1 = Integer.toBinaryString(Integer.parseInt(q1.getText()));
                 String bq2 = Integer.toBinaryString(Integer.parseInt(q2.getText()));
                 String bq3 = Integer.toBinaryString(Integer.parseInt(q3.getText()));
@@ -393,7 +393,7 @@ public class calculadora extends javax.swing.JFrame {
             } else if (bitMas >= 24) {
                 Clase.setText("Clase C");
             }
-        } else if ((octeto > 255) || (octeto1 > 255) || (octeto2 > 255) || (octeto3 > 255)) {
+        } else if ((octeto > 255) || (octeto1 > 255) || (octeto2 > 255) || (octeto3 > 255) || (octeto1 < 1)) {
             DireccionBin.setText("No existe en el");
         MascaraBin.setText("rango de IPv4");
         RedesBin.setText("Intenta ingresando");
