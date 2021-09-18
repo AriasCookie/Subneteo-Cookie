@@ -334,7 +334,6 @@ public class calculadora extends javax.swing.JFrame {
                 DirBin = (DirBin << 8) + Integer.parseInt(ipByte4, 2);
                 //Generando la mascara de red de 32bit en binario
                 int MasBin = ~0 << (32 - bitMas);
-                int MasBin1 = MasBin - 1;
                 //Operación para la dirección de Red
                 int RedBin = DirBin & MasBin;
                 //Operación para la dirección broadcast
@@ -342,7 +341,7 @@ public class calculadora extends javax.swing.JFrame {
                 //dividiento el string con punto (".")
                 String strDirBin = Integer.toBinaryString(DirBin);
                 String[] printDirBin = strDirBin.split("(?<=\\G........)");
-                String strMasBin = Integer.toBinaryString(MasBin1);
+                String strMasBin = Integer.toBinaryString(MasBin);
                 String[] printMasBin = strMasBin.split("(?<=\\G........)");
                 String strRedBin = Integer.toBinaryString(RedBin);
                 String[] printRedBin = strRedBin.split("(?<=\\G........)");
